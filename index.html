@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      form {
+        display: flex;
+        flex-flow: column;
+        max-width: 280px;
+      }
+      form > * {
+        padding: 5px;
+      }
+      .invalido {
+        color: red;
+      }
+      input[type="checkbox"].invalido + label {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo">Cadastro de usuário</h1>
+    <form id="cadastro">
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" name="usuario" />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" />
+
+      <label for="repetesenha">Repetir senha:</label>
+      <input type="password" id="repetesenha" name="repetesenha" />
+
+      <label for="cidade">Cidade:</label>
+      <select id="cidade" name="cidade">
+        <option selected>-- selecione --</option>
+        <option value="1">Mongaguá</option>
+        <option value="2">Praia Grande</option>
+        <option value="3">Itanhaém</option>
+      </select>
+
+      <div>
+        <input type="checkbox" id="deacordo" name="deacordo" />
+        <label for="deacordo">Concordo com os termos de uso</label>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>
